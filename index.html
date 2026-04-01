@@ -3,32 +3,30 @@
  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        #heading {
-            background: #e50914;
-        }
-        #heading h1 {
-            padding: 15px;
-            font-size: 20px;
-            text-transform: uppercase;
-        }
-        #heading a {
-            color: #fff;
-            text-decoration: none;
-            font-family: sans-serif;
-        }
-    </style>
+    <title>Lista de tarefas</title>
+    <link rel="stylesheet" href="Lista_de_Tarefas/css/reset.css">
+    <link rel="stylesheet" href="Lista_de_Tarefas/css/estilo.css">
  </head>
  <body>
-    <header id="heading">
-        <h1>
-            <a href="#">Netflix</a>
-        </h1>
-    </header>    
+    <section class="container">
+        <h1>Lista de Tarefas</h1>
+        <form class="task_input_container">
+            <input type="text" id="taskInput" placeholder="Digite a tarefa">
+            <button type="submit">Adicionar</button>
+        </form>
+        <ul class="task_list">
+            <li class="task_item">
+                <span class= "task_title">Titulo</span> 
+               <div class="task_actions">
+                    <button>&#9998;</button>  <!-- editar -->
+                    <button>&#10003;</button> <!-- concluir -->
+                    <button>&#10005;</button> <!-- apagar -->
+               </div>
+            </li>
+        </ul>
+        <div class="progress_container">
+            <div class="progress_bar" id="progress_bar"></div>
+        </div>
+    </section>
  </body>
  </html>
