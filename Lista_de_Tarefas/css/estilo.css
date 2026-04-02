@@ -17,7 +17,7 @@ body{
 }
 
 h1 {
-    font-size: 2,5rem;
+    font-size: 2.5rem;
     color: purple;
     margin-bottom: 20px;
 }
@@ -38,7 +38,7 @@ h1 {
     transition: width 0.5s ease-in-out;
 }
 
-#task_input_container {
+.task_input_container {
     display: flex;
     gap: 20px;
     margin-bottom: 10px;
@@ -60,7 +60,7 @@ h1 {
     outline: none;
 }
 
-#task_input_container button {
+.task_input_container button {
     height: 40px;
     width: 40px;
     font-size: 16px;
@@ -71,7 +71,7 @@ h1 {
     cursor: pointer;
 }
 
-#task_input_container button:hover {
+.task_input_container button:hover {
     background-color: #ff4800;
 }
 
@@ -93,7 +93,7 @@ h1 {
 #editing_task_input {
     border: none;
     outline: none;
-    border-bottom: #ff4800;
+    border-bottom: 2px solid #ff4800;
 }
 
 #editing_task_input:focus {

@@ -10,11 +10,11 @@
  <body>
     <section class="container">
         <h1>Lista de Tarefas</h1>
-        <form class="task_input_container">
+       <div class="task_input_container">
             <input type="text" id="task_input" placeholder="Digite a tarefa">
-            <button>+</button>
-        </form>
-        <ul class="task_list">
+            <button onclick="add_task()">+</button>
+        </div>
+        <ul class="task_list" id="task_list">
         </ul>
         <div class="progress_container">
             <div class="progress_bar" id="progress_bar"></div>
