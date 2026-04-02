@@ -99,3 +99,18 @@ h1 {
 #editing_task_input:focus {
     outline: none;
 }
+.task_actions button {
+    height: 32px;
+    width: 32px;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.task_actions button:nth-child(1) { background-color: #a78bfa; color: #fff; }
+.task_actions button:nth-child(2) { background-color: #f87171; color: #fff; }
+.task_actions button:nth-child(3) { background-color: #34d399; color: #fff; }
+
+.task_actions button:hover { filter: brightness(0.9); }
