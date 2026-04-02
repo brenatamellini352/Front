@@ -3,7 +3,7 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: url(../img/Power\ point\ 3.jpg) no-repeat center/cover;
+    background: url(../img/to_dolist3.jpg) no-repeat center/cover;
     text-align: center;
 }
 
@@ -83,4 +83,19 @@ h1 {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 5px;
+}
+
+.completed_task {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+#editing_task_input {
+    border: none;
+    outline: none;
+    border-bottom: #ff4800;
+}
+
+#editing_task_input:focus {
+    outline: none;
 }
