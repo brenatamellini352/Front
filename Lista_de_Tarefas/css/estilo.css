@@ -5,11 +5,11 @@
     --container-border: rgba(255, 255, 255, 0.2);
     --h1-color: #e0e0e0;
     --task-bg: rgba(255, 255, 255, 0.15);
-    --task-text: #000;
+    --task-text: #fff;
     --task-border: rgba(255, 255, 255, 0.2);
     --input-bg: rgba(255, 255, 255, 0.1);
-    --input-text: #222222;
-    --input-placeholder: #000;
+    --input-text: #fff;
+    --input-placeholder: #fff;
     --btn-add-bg: #222;
     --btn-add-color: #fff;
     --completed-color: #aaa;
