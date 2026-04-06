@@ -3,7 +3,7 @@
     --bg-image: url(../img/to_do_dark.jpg);
     --container-bg: rgba(255, 255, 255, 0.08);
     --container-border: rgba(255, 255, 255, 0.2);
-    --h1-color: #006400;
+    --h1-color: #e0e0e0;
     --task-bg: rgba(255, 255, 255, 0.15);
     --task-text: #000;
     --task-border: rgba(255, 255, 255, 0.2);
@@ -13,7 +13,7 @@
     --btn-add-bg: #222;
     --btn-add-color: #fff;
     --completed-color: #aaa;
-    --progress-track: #006400;
+    --progress-track: #ffcc00;
     --progress-fill: #90ee90;
 }
 
