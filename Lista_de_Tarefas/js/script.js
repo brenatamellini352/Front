@@ -101,3 +101,29 @@ function update_progress() {
 document.getElementById("task_input").addEventListener("keydown", e => {
     if (e.key === "Enter") add_task();
 });
+
+// ===== TEMA =====
+function toggle_theme() {
+    const body = document.body;
+    const btn = document.querySelector(".theme_toggle");
+
+    if (body.getAttribute("data-theme") === "light") {
+        body.removeAttribute("data-theme");
+        btn.textContent = "🌙";
+        localStorage.setItem("theme", "dark");
+    } else {
+        body.setAttribute("data-theme", "light");
+        btn.textContent = "☀️";
+        localStorage.setItem("theme", "light");
+    }
+}
+
+// Carrega o tema guardado ao abrir a página
+(function () {
+    const saved = localStorage.getItem("theme");
+    if (saved === "light") {
+        document.body.setAttribute("data-theme", "light");
+        const btn = document.querySelector(".theme_toggle");
+        if (btn) btn.textContent = "☀️";
+    }
+})();
