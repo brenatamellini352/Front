@@ -1,5 +1,3 @@
-let tasks = [];
-let task_id = 1;
 let editing_task_id = null;
 
 function add_task() {
@@ -7,12 +5,13 @@ function add_task() {
     const task_text = task_input.value.trim();
     if (task_text === "") return;
 
-    tasks.push({ id: task_id++, text: task_text, completed: false });
+    api.add_task(task_text);
     task_input.value = "";
     update_task_list();
 }
 
 function update_task_list() {
+    const tasks = api.get_tasks();
     const task_list = document.getElementById("task_list");
     task_list.innerHTML = "";
 
@@ -60,14 +59,11 @@ function update_task_list() {
 }
 
 function edit_task(id) {
-    const task = tasks.find(t => t.id === id);
-    if (!task) return;
-
     if (editing_task_id === id) {
         const input = document.getElementById("editing_task_input");
         const new_text = input ? input.value.trim() : "";
         if (new_text !== "") {
-            task.text = new_text;
+            api.edit_task(id, new_text);
             editing_task_id = null;
             update_task_list();
         }
@@ -78,20 +74,18 @@ function edit_task(id) {
 }
 
 function delete_task(id) {
-    tasks = tasks.filter(t => t.id !== id);
+    api.delete_task(id);
     if (editing_task_id === id) editing_task_id = null;
     update_task_list();
 }
 
 function toggle_task_completion(id) {
-    const task = tasks.find(t => t.id === id);
-    if (task) {
-        task.completed = !task.completed;
-        update_task_list();
-    }
+    api.toggle_task(id);
+    update_task_list();
 }
 
 function update_progress() {
+    const tasks = api.get_tasks();
     const total = tasks.length;
     const completed = tasks.filter(t => t.completed).length;
     const percent = total === 0 ? 0 : Math.round((completed / total) * 100);
@@ -127,3 +121,4 @@ function toggle_theme() {
         if (btn) btn.textContent = "☀️";
     }
 })();
+update_task_list();
